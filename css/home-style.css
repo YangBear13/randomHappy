@@ -1,18 +1,22 @@
-*{
+* {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-user-select: none;
 }
+
 html,
 body {
 	background-color: #efc6ff;
 	overflow: hidden;
 }
+
 img {
 	vertical-align: middle;
 }
+
 .yu {
 	width: 120px;
 }
+
 .web-title {
 	text-align: center;
 	padding: 15px 0px;
@@ -61,10 +65,13 @@ img {
 	justify-content: center;
 	width: 100%;
 	height: 100%;
+	
 }
 
 .item-img img {
 	width: 70%;
+	position: relative;
+	z-index: 999;
 }
 
 /* 轮播 end */
@@ -86,7 +93,7 @@ img {
 }
 
 #start.start {
-	background-color: #14ff5e;
+	background-color: #37ff70;
 	color: #406820;
 }
 
@@ -109,6 +116,30 @@ img {
 
 .end img {
 	cursor: pointer;
+	transition: all 1s;
+}
+
+.msg {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%) ;
+	top: 20%;
+	display: flex;
+	align-items: center;
+	flex-flow: column;
+	justify-content: center;
+	display: none;
+	text-align: center;
+}
+
+.msg p {
+	font-size: 40px;
+	color: #e54334;
+	font-weight: 800;
+	white-space: nowrap;
+	transform:  scale(0);
+	transition: all 1s;
+	transform-origin: center;
 }
 
 .rotate {
@@ -122,6 +153,15 @@ img {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, .5);
+	
+}
+.get-message {
+	font-size: 40px;
+	white-space: nowrap;
+	color: #5e1b6b;
+	margin-top: 150px;
+	transform:  scale(0);
+	transform-origin: center;
 }
 
 

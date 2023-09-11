@@ -13,7 +13,7 @@
 		<script src="js/slider.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
-		<h1 class="web-title"><img src="img/yu.png" class="yu" >专属抽奖</h1>
+		<h1 class="web-title"><img src="img/yu.png" class="yu">专属抽奖</h1>
 		<!-- 开屏动画 -->
 		<div class="animate-begin">
 			<!-- 	<ul class="message-list">
@@ -59,10 +59,13 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="mark"></div> -->
-			<!-- <div class="ticket">
-				<img src="img/2422402.png" >
-			</div> -->
+			<div class="msg">
+				<p>恭喜你获得了:</p>
+				<div class="get-message">
+					一整个银河系
+				</div>
+			</div>
+			
 		</main>
 		<!-- 抽奖系统 end -->
 		<!-- 结尾信息 -->
@@ -74,10 +77,13 @@
 			var timer;
 			let clicgFlag = true
 			// 抽奖列表
-			let randomList = ["金珉奎的一张照片", "一颗太阳", "一颗羽仔"]
+			let randomList = ["一整个银河系", "一颗太阳", "一个男朋友"]
 			let randomNum = parseInt(Math.random() * randomList.length)
+			$(".get-message").text(randomList[randomNum])
 			$("#start").click(function() {
+				
 				if (clicgFlag) {
+					$("#move-left").click()
 					timer = setInterval(function() {
 						$("#move-left").click()
 					}, 300)
@@ -94,6 +100,15 @@
 						$(".tip").insertBefore('#start').fadeIn()
 					}, 1000)
 				}
+			})
+			$("body").on('click', '.end', function() {
+				$(".end img").css('transform', 'scale(0)')
+				$(".msg").show()
+				$(".msg p").css('transform', 'scale(1)')
+				setTimeout(function () {
+					$(".get-message").css('transform', 'scale(1)')
+				},1000)
+				$(".tip").hide()
 			})
 		</script>
 	</body>
