@@ -1,25 +1,41 @@
-html,body {
+*{
+	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
+}
+html,
+body {
 	background-color: #efc6ff;
+	overflow: hidden;
+}
+img {
+	vertical-align: middle;
+}
+.yu {
+	width: 120px;
 }
 .web-title {
 	text-align: center;
-padding: 15px 0px;
-color: #fff;
+	padding: 15px 0px;
+	color: #3e3e3e;
 }
+
 /* 留言 */
-.animate-begin {
-	
-}
+.animate-begin {}
+
 /* 留言 */
 /* 轮播 */
 .slider-wrap {
 	position: relative;
-	overflow: hidden;
-	height: 360px;
+	/* overflow: hidden; */
+	height: 460px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 	margin-bottom: 40px;
+	background-image: url(../img/desk.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center 350px;
 }
 
 .slider-list {
@@ -35,24 +51,27 @@ color: #fff;
 	width: 100%;
 	height: 100%;
 	flex: none;
-	background-color: #fff;
 	padding: 15px;
+	transition: all 1s ease;
 }
-.item-img  {
+
+.item-img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
 	height: 100%;
 }
-.item-img  img{
+
+.item-img img {
 	width: 70%;
 }
 
 /* 轮播 end */
 
 /* button */
-#start,#stop {
+#start,
+.tip {
 	background-color: transparent;
 	width: 100%;
 	background-color: #fff;
@@ -63,10 +82,58 @@ color: #fff;
 	margin: 10px 0px;
 	font-weight: 800;
 	font-size: 16px;
-	
+
 }
-#start {
+
+#start.start {
 	background-color: #14ff5e;
 	color: #406820;
 }
+
+#start.stop {
+	background-color: #ff373a;
+	color: #681521;
+}
+
+.tip {
+	background-color: transparent;
+	text-align: center;
+	display: none;
+	font-size: 25px;
+}
+
+.end {
+	/* position: fixed; */
+	transform: scale(1.2);
+}
+
+.end img {
+	cursor: pointer;
+}
+
+.rotate {
+	animation: rotate .5s infinite linear alternate-reverse;
+}
+
+.mark {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+
+
 /* button end */
+@keyframes rotate {
+	0% {
+		transform: scale(1.2) rotate(4deg);
+	}
+
+	100% {
+		transform: scale(1.2) rotate(-4deg);
+
+	}
+}

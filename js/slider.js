@@ -45,7 +45,7 @@ $(document).ready(function() {
 				sliderList.css('transition', 'all .5s ease')
 				slider.data('sliderIndex', backNext)
 				updateSlider(slider)
-			}, 1)
+			}, 30)
 		}
 	}
 	// 设置更新函数
@@ -53,8 +53,8 @@ $(document).ready(function() {
 		let sliderIndex = slider.data('sliderIndex')
 		let count = -sliderIndex * slider.outerWidth()
 		slider.find('.slider-list').css('left', count)
-		slider.find('.slider-redian .slider-item').eq(sliderIndex).addClass('active').siblings().removeClass(
-			'active')
+		slider.find('.slider-redian .slider-item').eq(sliderIndex).addClass('active').siblings().removeClass('active')
+			slider.find('.slider-list .slider-item').eq(sliderIndex).addClass('end').siblings().removeClass('end')
 	}
 
 	// 点击事件
