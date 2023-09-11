@@ -1,0 +1,52 @@
+html,body {
+	background-color: #efc6ff;
+}
+.web-title {
+	text-align: center;
+padding: 15px 0px;
+color: #fff;
+}
+/* 留言 */
+.animate-begin {
+	
+}
+/* 留言 */
+/* 轮播 */
+.slider-wrap {
+	position: relative;
+	overflow: hidden;
+	height: 360px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 40px;
+}
+
+.slider-list {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	left: 0;
+	transition: all .5s ease;
+}
+
+.slider-item {
+	width: 100%;
+	height: 100%;
+	flex: none;
+	background-color: #fff;
+	padding: 15px;
+}
+.item-img  {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+.item-img  img{
+	width: 70%;
+}
+
+/* 轮播 end */
