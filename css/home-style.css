@@ -50,3 +50,23 @@ color: #fff;
 }
 
 /* 轮播 end */
+
+/* button */
+#start,#stop {
+	background-color: transparent;
+	width: 100%;
+	background-color: #fff;
+	padding: 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin: 10px 0px;
+	font-weight: 800;
+	font-size: 16px;
+	
+}
+#start {
+	background-color: #14ff5e;
+	color: #406820;
+}
+/* button end */

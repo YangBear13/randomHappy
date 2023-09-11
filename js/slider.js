@@ -45,7 +45,7 @@ $(document).ready(function() {
 				sliderList.css('transition', 'all .5s ease')
 				slider.data('sliderIndex', backNext)
 				updateSlider(slider)
-			}, 30)
+			}, 1)
 		}
 	}
 	// 设置更新函数
